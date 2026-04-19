@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="Suvo">
+  <title>Suvo</title>
+  <!-- Geometric S on a 24x24 grid, stroke=4, arc radius=4, letterform bbox 16x20 centered. -->
+  <!-- Upper bar + top-right arc + diagonal + lower bar + bottom-left arc. -->
+  <path fill="#FF6B00" fill-rule="evenodd" d="
+    M 4 2
+    H 18
+    A 4 4 0 0 1 22 6
+    V 8
+    H 18
+    V 6
+    H 8
+    L 16 16
+    A 4 4 0 0 1 12 20
+    H 6
+    V 18
+    H 12
+    A 2 2 0 0 0 14 16
+    L 6 6
+    A 4 4 0 0 1 4 2
+    Z
+  "/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 96" width="344" height="96" role="img" aria-label="Suvo">
+  <title>Suvo</title>
+  <!-- Mark at 0..96, scaled 4x from 24u to 96u -->
+  <g transform="scale(4)">
+    <path fill="#FF6B00" fill-rule="evenodd" d="M 4 2 H 18 A 4 4 0 0 1 22 6 V 8 H 18 V 6 H 8 L 16 16 A 4 4 0 0 1 12 20 H 6 V 18 H 12 A 2 2 0 0 0 14 16 L 6 6 A 4 4 0 0 1 4 2 Z"/>
+  </g>
+  <!-- Wordmark at x=104 -->
+  <g transform="translate(104 0)" fill="currentColor">
+    <path d="M 12 6 H 54 A 12 12 0 0 1 66 18 V 24 H 54 V 18 H 24 L 60 60 A 12 12 0 0 1 48 72 H 12 V 60 H 48 A 6 6 0 0 0 54 54 L 18 18 A 12 12 0 0 1 12 6 Z"/>
+    <path d="M 84 24 V 54 A 18 18 0 0 0 120 54 V 24 H 108 V 54 A 6 6 0 0 1 96 54 V 24 Z M 120 72 H 132 V 24 H 120 Z"/>
+    <path d="M 144 24 L 162 72 H 174 L 192 24 H 180 L 168 60 L 156 24 Z"/>
+    <path fill-rule="evenodd" d="M 222 48 A 24 24 0 1 1 174 48 A 24 24 0 1 1 222 48 Z M 210 48 A 12 12 0 1 0 186 48 A 12 12 0 1 0 210 48 Z"/>
+  </g>
+</svg>
