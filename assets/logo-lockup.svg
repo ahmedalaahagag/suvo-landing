@@ -5,7 +5,7 @@
     <!-- S (cap) -->
     <path d="M 12 6 H 54 A 12 12 0 0 1 66 18 V 24 H 54 V 18 H 24 L 60 60 A 12 12 0 0 1 48 72 H 12 V 60 H 48 A 6 6 0 0 0 54 54 L 18 18 A 12 12 0 0 1 12 6 Z"/>
     <!-- u (lowercase, x-height 48, single-story) -->
-    <path d="M 84 24 V 54 A 18 18 0 0 0 120 54 V 24 H 108 V 54 A 6 6 0 0 1 96 54 V 24 Z M 120 72 H 132 V 24 H 120 Z"/>
+    <path d="M 84 24 V 54 A 18 18 0 0 0 120 54 V 24 H 108 V 54 A 6 6 0 0 1 96 54 V 24 Z"/>
     <!-- v (lowercase, flat truncated apex) -->
     <path d="M 144 24 L 162 72 H 174 L 192 24 H 180 L 168 60 L 156 24 Z"/>
     <!-- o (perfect circle, outer r=24, inner r=12) -->
