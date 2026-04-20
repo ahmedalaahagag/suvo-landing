@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Opening Suvo…</title>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #0A0A0F; color: #fff; font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; }
+    main { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; box-sizing: border-box; text-align: center; }
+    h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.5px; color: #FF6B00; }
+    p { color: #bbb; max-width: 420px; line-height: 1.5; margin: 8px 0; }
+    a.button { display: inline-block; background: #FF6B00; color: #fff; text-decoration: none; padding: 14px 24px; border-radius: 10px; font-weight: 700; font-size: 16px; margin-top: 24px; }
+    small { color: #777; font-size: 13px; margin-top: 32px; display: block; }
+    #err { color: #ff6b6b; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>suvo</h1>
+  <p id="status">Opening the Suvo app…</p>
+  <a id="open" class="button" href="#" style="display:none">Open Suvo</a>
+  <p id="err"></p>
+  <small>Not installed yet? Get Suvo from the App Store or Google Play.</small>
+</main>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var token = params.get("token");
+    var status = document.getElementById("status");
+    var err = document.getElementById("err");
+    var openBtn = document.getElementById("open");
+
+    if (!token) {
+      status.textContent = "This link is missing its sign-in token.";
+      err.textContent = "Request a new link from the Suvo app.";
+      return;
+    }
+
+    var deepLink = "suvo://auth/verify?token=" + encodeURIComponent(token);
+    openBtn.href = deepLink;
+    openBtn.style.display = "inline-block";
+
+    // Attempt to hand off to the Suvo app. Gmail's in-app WebView (Android)
+    // and some iOS email clients block programmatic navigation to custom
+    // schemes — we fall back to a user-tapped button which both platforms
+    // honor because it's a direct user gesture.
+    try {
+      window.location.href = deepLink;
+    } catch (e) {
+      // Ignore — button fallback is always rendered.
+    }
+
+    setTimeout(function () {
+      status.textContent = "If Suvo didn't open automatically, tap the button below.";
+    }, 1500);
+  })();
+</script>
+</body>
+</html>
