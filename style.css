@@ -284,10 +284,10 @@ h3 {
 .tag.info   { color: var(--info); }
 .tag.warn   { color: var(--warning); }
 
-/* ---------- "What else is in the box" list ---------- */
+/* ---------- "What else is in the box" mini-card grid ---------- */
 
 .more-heading {
-  margin: 40px 0 16px;
+  margin: 48px 0 16px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -297,27 +297,42 @@ h3 {
 
 .more-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
   margin: 0;
   padding: 0;
 }
 
 .more-list > div {
   position: relative;
-  padding: 10px 0 10px 16px;
-  border-left: 2px solid var(--border);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 14px 14px 14px 18px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
-.more-list > div:hover {
-  border-left-color: var(--brand);
+/* Subtle left accent rail — echoes the hero cards' ::before pattern but thinner + dimmer */
+.more-list > div::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 14px; bottom: 14px;
+  width: 2px;
+  border-radius: 0 2px 2px 0;
+  background: var(--border);
+  transition: background 120ms ease;
+}
+
+.more-list > div:hover::before {
+  background: var(--brand);
 }
 
 .more-list dt {
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
-  margin: 0 0 2px;
+  margin: 0 0 4px;
+  letter-spacing: -0.005em;
 }
 
 .more-list dd {
