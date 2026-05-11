@@ -18,29 +18,76 @@
   <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="bg-blob bg-blob-orange"></div>
+    <div class="bg-blob bg-blob-purple"></div>
+    <div class="bg-blob bg-blob-teal"></div>
+  </div>
+
   <header class="hero">
-    <nav>
+    <nav class="glass-nav">
       <a href="/" class="brand" aria-label="Suvo home">
         <img src="assets/brand-mark.png" alt="" width="32" height="32" />
         <span>Suvo</span>
       </a>
-      <a href="#features">Features</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="affiliates.html">Disclosure</a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="affiliates.html">Disclosure</a>
+      </div>
+      <a class="cta cta-sm" href="mailto:hello@getsuvo.com" aria-label="Get the Suvo app">
+        Get the app
+        <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </nav>
 
     <div class="hero-inner">
       <div class="hero-copy">
-        <span class="section-label">Supplements · Interactions · Timing</span>
+        <span class="eyebrow-chip">
+          <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
+          Supplements · Interactions · Timing
+        </span>
         <h1>Your supplement stack. <span class="accent">Optimized.</span></h1>
         <p class="lede">
           Analyze interactions. Track everything. Time it right.
           From scan to schedule — no guesswork. No conflicts. Just clarity.
         </p>
+        <div class="hero-ctas">
+          <a class="cta" href="mailto:hello@getsuvo.com">
+            Get Suvo
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="cta-ghost" href="#features">See how it works</a>
+        </div>
+        <ul class="hero-checks">
+          <li>
+            <svg class="icon check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Interaction-aware
+          </li>
+          <li>
+            <svg class="icon check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Cadence-honest
+          </li>
+          <li>
+            <svg class="icon check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Country-aware
+          </li>
+        </ul>
       </div>
       <div class="hero-shot" aria-hidden="true">
         <div class="phone">
           <img src="img/my-stack.png" alt="Suvo My Stack screen showing Today's Progress, Stack Review, and three supplements: 5-HTP, Ashwagandha KSM-66, and Iron." />
+        </div>
+        <div class="hero-badge hero-badge-left" aria-hidden="true">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div>
+            <div class="badge-title">Iron blocks Calcium</div>
+            <div class="badge-sub">Take 2h apart</div>
+          </div>
+        </div>
+        <div class="hero-badge hero-badge-right" aria-hidden="true">
+          <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
+          <span class="badge-title">Stack score: 92</span>
         </div>
       </div>
     </div>
