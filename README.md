@@ -23,7 +23,6 @@ about.html                    About, contact, and source-review policy
 delete-account.html           Account deletion instructions
 affiliates.html               Affiliate disclosure
 404.html                      Custom not-found page
-auth/verify/index.html        Magic-link handoff page for the mobile app
 picks/                        Editorial product-pick pages
 sources/                      Public source library for supplement rules
 assets/                       Favicons, brand mark, social image
@@ -32,7 +31,6 @@ style.css                     Shared stylesheet
 robots.txt                    Search crawler rules
 sitemap.xml                   XML sitemap
 llms.txt                      AI/search-agent site summary
-SEO-TODO.md                   SEO implementation checklist and remaining work
 CNAME                         GitHub Pages custom domain
 ```
 
