@@ -1,0 +1,20 @@
+# Suvo
+
+> Suvo is a supplement tracking app for cataloging a user's stack, reviewing supplement interaction and timing conflicts, and building a clearer supplement schedule.
+
+Site: https://getsuvo.com/
+Contact: hello@getsuvo.com
+Language: en
+
+## Key pages
+
+- Homepage: https://getsuvo.com/
+- Source library: https://getsuvo.com/sources/
+- Privacy policy: https://getsuvo.com/privacy.html
+- Account deletion: https://getsuvo.com/delete-account.html
+- Affiliate disclosure: https://getsuvo.com/affiliates.html
+- Editorial picks: https://getsuvo.com/picks/
+
+## Source policy
+
+Suvo's supplement rules are educational and are not medical advice. Interaction, timing, and upper-limit guidance is based on named source tiers: regulatory authorities, government institutes, systematic reviews, academic references, and curated databases. The public source library explains why each source is trusted and where it fits in the hierarchy.

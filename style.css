@@ -720,6 +720,19 @@ footer a:hover { color: var(--text); }
   max-width: 640px;
 }
 
+.section-link {
+  margin: 22px 0 0;
+  font-size: 14px;
+}
+.section-link a {
+  color: var(--brand-light);
+  font-weight: 600;
+}
+.section-link a:hover {
+  color: var(--brand);
+  opacity: 1;
+}
+
 /* ---------- Feature cards (with icon-in-badge) ---------- */
 
 .feature-card {
@@ -955,6 +968,12 @@ footer a:hover { color: var(--text); }
 }
 .cta-light:hover { transform: scale(1.04); opacity: 1; }
 .cta-light .icon { color: var(--brand); }
+.button-logo {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
 
 .cta-glass-on-brand {
   display: inline-flex;
