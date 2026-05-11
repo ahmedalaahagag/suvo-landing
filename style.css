@@ -48,9 +48,51 @@ html, body {
 
 body {
   background-color: var(--bg);
+  /* Ambient static glow layer — applies to every page (home + subpages).
+     Home additionally renders animated .bg-blobs on top via index.html. */
+  background-image:
+    radial-gradient(600px 400px at 85% -10%, rgba(255,107,0,0.12), transparent 60%),
+    radial-gradient(700px 500px at -10% 30%, rgba(124,58,237,0.10), transparent 65%),
+    radial-gradient(500px 400px at 50% 120%, rgba(45,212,191,0.08), transparent 60%);
+  background-attachment: fixed;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+}
+
+/* ---------- Subpage h1 gradient (privacy / affiliates / delete-account / picks / sources / 404) ---------- */
+/* Targets <main> h1 only — home page h1 is inside <header class="hero">, not affected. */
+
+main h1 {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+}
+
+/* Glass-pill "Back to Suvo" link on legal subpages */
+.legal > p:first-child a,
+main > p:first-child a[href$="index.html"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(21, 21, 26, 0.55);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.legal > p:first-child a:hover,
+main > p:first-child a[href$="index.html"]:hover {
+  background: rgba(30, 30, 37, 0.75);
+  color: var(--text);
+  opacity: 1;
 }
 
 /* ---------- Animated ambient gradient blobs ---------- */
