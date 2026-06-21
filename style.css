@@ -482,6 +482,9 @@ footer a:hover { color: var(--text); }
   max-width: var(--max);
   margin: 16px auto 0;
   padding: 10px 18px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   background: rgba(21, 21, 26, 0.55);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-full);
@@ -495,8 +498,15 @@ footer a:hover { color: var(--text); }
 .glass-nav .nav-links {
   display: flex;
   gap: 22px;
-  margin-left: 8px;
-  margin-right: auto;
+  grid-column: 2;
+  justify-self: center;
+  margin: 0;
+}
+
+.glass-nav .brand {
+  grid-column: 1;
+  justify-self: start;
+  margin-right: 0;
 }
 
 @media (max-width: 640px) {
@@ -513,6 +523,12 @@ footer a:hover { color: var(--text); }
   padding: 8px 16px;
   font-size: 13px;
   box-shadow: 0 6px 18px rgba(255,107,0,0.30);
+}
+
+.cta-secondary {
+  background: rgba(21, 21, 26, 0.72);
+  border: 1px solid var(--border-light);
+  box-shadow: none;
 }
 
 /* Override the gray "nav a:not(.brand)" rule — CTA in nav is white on gradient */
@@ -546,10 +562,57 @@ footer a:hover { color: var(--text); }
 .eyebrow-chip .icon { color: var(--brand); }
 
 .hero-ctas {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 28px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero-ctas .cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 72px;
+  min-width: 0;
+  padding: 15px 18px;
+  border-radius: 999px;
+  font-size: clamp(12px, 0.9vw, 15px);
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 0 22px 50px rgba(255,107,0,0.24);
+}
+
+.store-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-right: 8px;
+  color: #fff;
+  line-height: 0;
+}
+
+.store-badge-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.store-badge-text {
+  display: block;
+  max-width: none;
+  min-width: 0;
+}
+
+.hero-ctas .cta-secondary {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  border: none;
+  box-shadow: 0 18px 40px rgba(255,107,0,0.24);
 }
 
 .cta-ghost {
@@ -567,9 +630,46 @@ footer a:hover { color: var(--text); }
   font-size: 15px;
   transition: background 0.15s ease;
 }
+
+.hero-ctas .cta-ghost {
+  grid-column: 1 / -1;
+  justify-self: center;
+  text-align: center;
+  min-height: 74px;
+  padding: 18px 28px;
+  border-radius: 38px;
+  background: rgba(45, 212, 191, 0.14);
+  border-color: rgba(45, 212, 191, 0.38);
+  color: var(--teal);
+  box-shadow: 0 14px 34px rgba(45, 212, 191, 0.12);
+}
+
 .cta-ghost:hover {
-  background: rgba(30, 30, 37, 0.75);
+  background: rgba(45, 212, 191, 0.2);
   opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .hero-ctas {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-ctas .cta,
+  .hero-ctas .cta-ghost {
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 14px;
+  }
+
+  .hero-ctas .cta {
+    min-height: 64px;
+    border-radius: 999px;
+    white-space: normal;
+  }
+
+  .hero-ctas .cta-ghost {
+    grid-column: auto;
+  }
 }
 
 .hero-checks {
