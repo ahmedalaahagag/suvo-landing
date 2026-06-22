@@ -4,3 +4,5 @@
 # dependencies
 CLAUDE.md
 AGENTS.md
+.serena/
+graphify-out/
