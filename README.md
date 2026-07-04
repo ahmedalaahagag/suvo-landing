@@ -17,12 +17,15 @@ This repository is intentionally simple:
 ## Project Structure
 
 ```text
-index.html                    Home page
+index.html                    Home page (English)
+de/index.html                 Home page (German)
+de/                           German localized pages (about, privacy, sources, picks, …)
+i18n.js                       Language switcher and saved locale preference
 privacy.html                  Privacy policy
 about.html                    About, contact, and source-review policy
 delete-account.html           Account deletion instructions
 affiliates.html               Affiliate disclosure
-impressum.html                German legal notice (§ 5 DDG)
+impressum.html                German legal notice and English legal notice (§ 5 DDG)
 404.html                      Custom not-found page
 picks/                        Editorial product-pick pages
 sources/                      Public source library for supplement rules

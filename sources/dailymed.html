@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Why Suvo uses DailyMed FDA label text as an official fallback for drug-supplement interaction context, warnings, and medication labels.">
   <link rel="canonical" href="https://getsuvo.com/sources/dailymed.html">
+  <link rel="alternate" hreflang="en" href="https://getsuvo.com/sources/dailymed.html">
+  <link rel="alternate" hreflang="de" href="https://getsuvo.com/de/sources/dailymed.html">
+  <link rel="alternate" hreflang="x-default" href="https://getsuvo.com/sources/dailymed.html">
   <link rel="stylesheet" href="../style.css">
   <meta property="og:title" content="DailyMed Drug Labels | Suvo Sources">
   <meta property="og:description" content="How Suvo uses DailyMed FDA label text as an official fallback for drug-supplement interaction context.">
@@ -47,7 +50,13 @@
 </head>
 <body>
   <main style="max-width: 680px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; line-height: 1.6;">
-    <p><a href="index.html">← All sources</a></p>
+    <div class="legal-top">
+      <a href="index.html">← All sources</a>
+      <div class="legal-lang-switcher lang-switcher" role="navigation" aria-label="Language">
+        <a href="dailymed.html" class="lang-btn" data-lang="en" lang="en" hreflang="en">EN</a>
+        <a href="../de/sources/dailymed.html" class="lang-btn" data-lang="de" lang="de" hreflang="de">DE</a>
+      </div>
+    </div>
     <h1>DailyMed</h1>
     <p><strong>Tier:</strong> Authoritative (U.S. government)</p>
 
@@ -68,5 +77,6 @@
 
     <p><a href="https://dailymed.nlm.nih.gov/" rel="noopener">Visit DailyMed →</a></p>
   </main>
+  <script src="../i18n.js"></script>
 </body>
 </html>

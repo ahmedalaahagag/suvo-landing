@@ -73,7 +73,8 @@ main h1 {
 
 /* Glass-pill "Back to Suvo" link on legal subpages */
 .legal > p:first-child a,
-main > p:first-child a[href$="index.html"] {
+main > p:first-child a[href$="index.html"],
+.legal-top > a:first-child {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -89,10 +90,24 @@ main > p:first-child a[href$="index.html"] {
   transition: background 0.15s ease, color 0.15s ease;
 }
 .legal > p:first-child a:hover,
-main > p:first-child a[href$="index.html"]:hover {
+main > p:first-child a[href$="index.html"]:hover,
+.legal-top > a:first-child:hover {
   background: rgba(30, 30, 37, 0.75);
   color: var(--text);
   opacity: 1;
+}
+
+.legal-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.legal-top .legal-lang-switcher {
+  flex-shrink: 0;
 }
 
 /* ---------- Animated ambient gradient blobs ---------- */
@@ -507,6 +522,43 @@ footer a:hover { color: var(--text); }
   grid-column: 1;
   justify-self: start;
   margin-right: 0;
+}
+
+.glass-nav .lang-switcher {
+  grid-column: 3;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  background: rgba(10, 10, 15, 0.35);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+}
+
+.lang-switcher .lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lang-switcher .lang-btn:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+.lang-switcher .lang-btn.is-active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
 }
 
 @media (max-width: 640px) {

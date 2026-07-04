@@ -4,18 +4,25 @@
 
 Site: https://getsuvo.com/
 Contact: hello@getsuvo.com
-Language: en
+Language: en and de (German pages under /de/)
 
 ## Key pages
 
-- Homepage: https://getsuvo.com/
-- About and contact: https://getsuvo.com/about.html
-- Source library: https://getsuvo.com/sources/
-- Privacy policy: https://getsuvo.com/privacy.html
-- Account deletion: https://getsuvo.com/delete-account.html
-- Affiliate disclosure: https://getsuvo.com/affiliates.html
-- Impressum (DE): https://getsuvo.com/impressum.html
-- Editorial picks: https://getsuvo.com/picks/
+- Homepage (EN): https://getsuvo.com/
+- Homepage (DE): https://getsuvo.com/de/
+- About and contact (EN): https://getsuvo.com/about.html
+- About and contact (DE): https://getsuvo.com/de/about.html
+- Source library (EN): https://getsuvo.com/sources/
+- Source library (DE): https://getsuvo.com/de/sources/
+- Privacy policy (EN): https://getsuvo.com/privacy.html
+- Privacy policy (DE): https://getsuvo.com/de/privacy.html
+- Account deletion (EN): https://getsuvo.com/delete-account.html
+- Account deletion (DE): https://getsuvo.com/de/delete-account.html
+- Affiliate disclosure (EN): https://getsuvo.com/affiliates.html
+- Affiliate disclosure (DE): https://getsuvo.com/de/affiliates.html
+- Impressum / legal notice (DE/EN): https://getsuvo.com/impressum.html
+- Editorial picks (EN): https://getsuvo.com/picks/
+- Editorial picks (DE): https://getsuvo.com/de/picks/
 
 ## Source policy
 

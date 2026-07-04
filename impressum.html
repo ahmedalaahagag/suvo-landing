@@ -4,19 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
-  <title>Impressum | Suvo</title>
-  <meta name="description" content="Impressum und Kontaktdaten für Suvo gemäß § 5 DDG." />
+  <title>Impressum / Legal Notice | Suvo</title>
+  <meta name="description" content="Impressum und Kontaktdaten für Suvo gemäß § 5 DDG. Legal notice and contact details for Suvo." />
   <link rel="canonical" href="https://getsuvo.com/impressum.html" />
+  <link rel="alternate" hreflang="en" href="https://getsuvo.com/impressum.html" />
+  <link rel="alternate" hreflang="de" href="https://getsuvo.com/impressum.html" />
+  <link rel="alternate" hreflang="x-default" href="https://getsuvo.com/impressum.html" />
   <link rel="stylesheet" href="style.css" />
-  <meta property="og:title" content="Impressum | Suvo" />
-  <meta property="og:description" content="Impressum und Kontaktdaten für Suvo gemäß § 5 DDG." />
+  <meta property="og:title" content="Impressum / Legal Notice | Suvo" />
+  <meta property="og:description" content="Impressum und Kontaktdaten für Suvo gemäß § 5 DDG. Legal notice and contact details for Suvo." />
   <meta property="og:image" content="https://getsuvo.com/assets/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getsuvo.com/impressum.html" />
   <meta property="og:site_name" content="Suvo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Impressum | Suvo" />
-  <meta name="twitter:description" content="Impressum und Kontaktdaten für Suvo gemäß § 5 DDG." />
+  <meta name="twitter:title" content="Impressum / Legal Notice | Suvo" />
+  <meta name="twitter:description" content="Impressum und Kontaktdaten für Suvo gemäß § 5 DDG. Legal notice and contact details for Suvo." />
   <meta name="twitter:image" content="https://getsuvo.com/assets/og-image.png" />
   <script type="application/ld+json">
   {
@@ -24,19 +27,26 @@
     "@type": "WebPage",
     "@id": "https://getsuvo.com/impressum.html#webpage",
     "url": "https://getsuvo.com/impressum.html",
-    "name": "Impressum",
-    "description": "Impressum und Kontaktdaten für Suvo gemäß § 5 DDG.",
+    "name": "Impressum / Legal Notice",
+    "description": "Impressum und Kontaktdaten für Suvo gemäß § 5 DDG. Legal notice and contact details for Suvo.",
     "isPartOf": { "@id": "https://getsuvo.com/#website" },
     "publisher": { "@id": "https://getsuvo.com/#organization" },
     "dateModified": "2026-07-04",
-    "inLanguage": "de"
+    "inLanguage": ["de", "en"]
   }
   </script>
 </head>
 <body>
   <main class="legal">
-    <p><a href="index.html">← Back to Suvo</a></p>
-    <h1>Impressum</h1>
+    <div class="legal-top">
+      <a href="index.html">← Back to Suvo · <span lang="de">Impressum</span></a>
+      <div class="legal-lang-switcher lang-switcher" role="navigation" aria-label="Language">
+        <a href="impressum.html" class="lang-btn" data-lang="en" lang="en" hreflang="en">EN</a>
+        <a href="impressum.html" class="lang-btn" data-lang="de" lang="de" hreflang="de">DE</a>
+      </div>
+    </div>
+    <p><a href="#legal-notice">English</a> · <a href="#impressum">Deutsch</a></p>
+    <h1 id="impressum">Impressum</h1>
     <p>Inhalte gemäß §5 DDG</p>
 
     <p>
@@ -51,6 +61,25 @@
       E-Mail: <a href="mailto:support@getsuvo.com">support@getsuvo.com</a><br />
       Telefon: <a href="tel:+4915141673866">+49 151 41673866</a>
     </p>
+
+    <h2 id="legal-notice" lang="en">Legal notice</h2>
+    <p lang="en"><a href="#impressum">Deutsch</a></p>
+    <p lang="en">Information pursuant to Section 5 of the German Digital Services Act (DDG).</p>
+
+    <p lang="en">
+      Ahmed Elzanaty<br />
+      c/o IP-Management #10816<br />
+      Ludwig-Erhard-Straße 18<br />
+      20459 Hamburg<br />
+      Germany
+    </p>
+
+    <h3 lang="en">Contact</h3>
+    <p lang="en">
+      Email: <a href="mailto:support@getsuvo.com">support@getsuvo.com</a><br />
+      Phone: <a href="tel:+4915141673866">+49 151 41673866</a>
+    </p>
   </main>
+  <script src="i18n.js"></script>
 </body>
 </html>
