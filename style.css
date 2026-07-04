@@ -110,6 +110,10 @@ main > p:first-child a[href$="index.html"]:hover,
   flex-shrink: 0;
 }
 
+.lang-section[hidden] {
+  display: none;
+}
+
 /* ---------- Animated ambient gradient blobs ---------- */
 
 .bg-blobs {

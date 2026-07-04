@@ -20,8 +20,7 @@ Language: en and de (German pages under /de/)
 - Account deletion (DE): https://getsuvo.com/de/delete-account.html
 - Affiliate disclosure (EN): https://getsuvo.com/affiliates.html
 - Affiliate disclosure (DE): https://getsuvo.com/de/affiliates.html
-- Impressum (DE): https://getsuvo.com/impressum.html
-- Legal notice (EN): https://getsuvo.com/legal-notice.html
+- Impressum / legal notice (DE/EN): https://getsuvo.com/impressum.html
 - Editorial picks (EN): https://getsuvo.com/picks/
 - Editorial picks (DE): https://getsuvo.com/de/picks/
 

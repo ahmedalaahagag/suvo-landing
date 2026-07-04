@@ -25,8 +25,8 @@ privacy.html                  Privacy policy
 about.html                    About, contact, and source-review policy
 delete-account.html           Account deletion instructions
 affiliates.html               Affiliate disclosure
-impressum.html                German legal notice (§ 5 DDG)
-legal-notice.html             English legal notice (§ 5 DDG)
+impressum.html                Bilingual legal notice — German Impressum and English legal notice (§ 5 DDG)
+legal-notice.html             Redirects to impressum.html
 404.html                      Custom not-found page
 picks/                        Editorial product-pick pages
 sources/                      Public source library for supplement rules
