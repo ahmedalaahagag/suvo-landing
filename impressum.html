@@ -11,6 +11,17 @@
   <link rel="alternate" hreflang="en" href="https://getsuvo.com/impressum.html" />
   <link rel="alternate" hreflang="x-default" href="https://getsuvo.com/impressum.html" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem('suvo-lang') || 'de';
+      document.documentElement.setAttribute('lang', lang);
+      var style = document.createElement('style');
+      style.textContent = lang === 'en'
+        ? '.lang-section[data-lang="de"]{display:none!important}'
+        : '.lang-section[data-lang="en"]{display:none!important}';
+      document.head.appendChild(style);
+    })();
+  </script>
   <meta property="og:title" content="Impressum / Legal Notice | Suvo" />
   <meta property="og:description" content="Impressum und Kontaktdaten für Suvo gemäß § 5 DDG. Legal notice and contact details for Suvo." />
   <meta property="og:image" content="https://getsuvo.com/assets/og-image.png" />
