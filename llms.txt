@@ -14,6 +14,7 @@ Language: en
 - Privacy policy: https://getsuvo.com/privacy.html
 - Account deletion: https://getsuvo.com/delete-account.html
 - Affiliate disclosure: https://getsuvo.com/affiliates.html
+- Impressum (DE): https://getsuvo.com/impressum.html
 - Editorial picks: https://getsuvo.com/picks/
 
 ## Source policy

@@ -22,6 +22,7 @@ privacy.html                  Privacy policy
 about.html                    About, contact, and source-review policy
 delete-account.html           Account deletion instructions
 affiliates.html               Affiliate disclosure
+impressum.html                German legal notice (§ 5 DDG)
 404.html                      Custom not-found page
 picks/                        Editorial product-pick pages
 sources/                      Public source library for supplement rules
