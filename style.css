@@ -621,7 +621,7 @@ footer a:hover { color: var(--text); }
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 12px;
   max-width: 900px;
   width: 100%;
 }
@@ -671,6 +671,26 @@ footer a:hover { color: var(--text); }
   box-shadow: 0 18px 40px rgba(255,107,0,0.24);
 }
 
+.hero-price {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  max-width: 480px;
+}
+
+.hero-how {
+  display: inline-block;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 16px;
+}
+
+.hero-how:hover { color: var(--text); }
+
 .cta-ghost {
   display: inline-flex;
   align-items: center;
@@ -687,19 +707,6 @@ footer a:hover { color: var(--text); }
   transition: background 0.15s ease;
 }
 
-.hero-ctas .cta-ghost {
-  grid-column: 1 / -1;
-  justify-self: center;
-  text-align: center;
-  min-height: 74px;
-  padding: 18px 28px;
-  border-radius: 38px;
-  background: rgba(45, 212, 191, 0.14);
-  border-color: rgba(45, 212, 191, 0.38);
-  color: var(--teal);
-  box-shadow: 0 14px 34px rgba(45, 212, 191, 0.12);
-}
-
 .cta-ghost:hover {
   background: rgba(45, 212, 191, 0.2);
   opacity: 1;
@@ -710,28 +717,20 @@ footer a:hover { color: var(--text); }
     grid-template-columns: 1fr;
   }
 
-  .hero-ctas .cta,
-  .hero-ctas .cta-ghost {
+  .hero-ctas .cta {
     padding-left: 18px;
     padding-right: 18px;
     font-size: 14px;
-  }
-
-  .hero-ctas .cta {
     min-height: 64px;
     border-radius: 999px;
     white-space: normal;
-  }
-
-  .hero-ctas .cta-ghost {
-    grid-column: auto;
   }
 }
 
 .hero-checks {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 14px 18px;
   list-style: none;
   margin: 0;
   padding: 0;
