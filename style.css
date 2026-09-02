@@ -680,16 +680,26 @@ footer a:hover { color: var(--text); }
 }
 
 .hero-how {
-  display: inline-block;
-  color: var(--text-muted);
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: rgba(45, 212, 191, 0.14);
+  border: 1px solid rgba(45, 212, 191, 0.38);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--teal);
   font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  margin-top: 16px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s ease;
 }
 
-.hero-how:hover { color: var(--text); }
+.hero-how:hover {
+  background: rgba(45, 212, 191, 0.2);
+  color: var(--teal);
+}
 
 .cta-ghost {
   display: inline-flex;
