@@ -5,11 +5,27 @@
 Site: https://getsuvo.com/
 Contact: hello@getsuvo.com
 Language: en and de (German pages under /de/)
+Price: free, no ads, no paywall (funded by affiliate links)
+iOS app: https://apps.apple.com/app/id6764276451
+Android app: https://play.google.com/store/apps/details?id=com.suvo.mobile
+
+## What Suvo does
+
+- Adds supplements by barcode scan, label-photo OCR, or name search
+- Breaks multivitamins into individual compounds
+- Flags supplement interactions and timing conflicts (for example iron with calcium or coffee)
+- Warns when stacked products push a nutrient past its upper limit
+- Schedules morning, evening, and meal-time reminder slots with daily, every-other-day, weekly, and monthly cadences
+- Tracks adherence streaks that respect each supplement's cadence
+- Supports managed profiles for family members under one adult account
+- Links to country-appropriate retailers (DE, UK, US, MEA)
 
 ## Key pages
 
 - Homepage (EN): https://getsuvo.com/
 - Homepage (DE): https://getsuvo.com/de/
+- FAQ (EN): https://getsuvo.com/#faq
+- FAQ (DE): https://getsuvo.com/de/#faq
 - About and contact (EN): https://getsuvo.com/about.html
 - About and contact (DE): https://getsuvo.com/de/about.html
 - Source library (EN): https://getsuvo.com/sources/
@@ -18,6 +34,8 @@ Language: en and de (German pages under /de/)
 - Privacy policy (DE): https://getsuvo.com/de/privacy.html
 - Account deletion (EN): https://getsuvo.com/delete-account.html
 - Account deletion (DE): https://getsuvo.com/de/delete-account.html
+- Terms of use (EN): https://getsuvo.com/terms.html
+- Terms of use (DE): https://getsuvo.com/de/terms.html
 - Affiliate disclosure (EN): https://getsuvo.com/affiliates.html
 - Affiliate disclosure (DE): https://getsuvo.com/de/affiliates.html
 - Impressum / legal notice (DE/EN): https://getsuvo.com/impressum.html

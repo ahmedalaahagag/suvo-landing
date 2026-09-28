@@ -1,0 +1,20 @@
+{
+  "name": "Suvo — Supplement Tracker",
+  "short_name": "Suvo",
+  "description": "Supplement tracker for interactions, timing, and reminders.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#0A0A0F",
+  "theme_color": "#0A0A0F",
+  "icons": [
+    { "src": "/assets/favicon-96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "/assets/brand-mark.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "related_applications": [
+    { "platform": "play", "url": "https://play.google.com/store/apps/details?id=com.suvo.mobile", "id": "com.suvo.mobile" },
+    { "platform": "itunes", "url": "https://apps.apple.com/app/id6764276451" }
+  ],
+  "prefer_related_applications": true
+}
