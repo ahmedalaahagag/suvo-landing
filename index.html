@@ -4,8 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
-  <title>Supplement Tracker for Interactions &amp; Timing | Suvo</title>
+  <title>Supplement Tracker App for Interactions &amp; Timing | Suvo</title>
   <meta name="description" content="Suvo is a supplement tracker for scanning your stack, spotting interactions, and timing doses around meals and sleep. Build a clearer supplement schedule." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="apple-itunes-app" content="app-id=6764276451" />
+  <link rel="manifest" href="manifest.webmanifest" />
   <link rel="canonical" href="https://getsuvo.com/" />
   <link rel="alternate" hreflang="en" href="https://getsuvo.com/" />
   <link rel="alternate" hreflang="de" href="https://getsuvo.com/de/" />
@@ -15,18 +18,22 @@
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-  <meta property="og:title" content="Supplement Tracker for Interactions &amp; Timing | Suvo" />
+  <meta property="og:title" content="Supplement Tracker App for Interactions &amp; Timing | Suvo" />
   <meta property="og:description" content="Scan your stack, spot interactions, and time supplements around meals and sleep." />
   <meta property="og:image" content="https://getsuvo.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Suvo supplement tracker app: scan your stack, spot interactions, and time doses" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getsuvo.com/" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:site_name" content="Suvo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Supplement Tracker for Interactions &amp; Timing | Suvo" />
+  <meta name="twitter:title" content="Supplement Tracker App for Interactions &amp; Timing | Suvo" />
   <meta name="twitter:description" content="Scan your stack, spot interactions, and time supplements around meals and sleep." />
   <meta name="twitter:image" content="https://getsuvo.com/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="Suvo supplement tracker app: scan your stack, spot interactions, and time doses" />
   <meta name="theme-color" content="#0A0A0F" />
   <script type="application/ld+json">
   {
@@ -39,11 +46,18 @@
         "url": "https://getsuvo.com/",
         "logo": "https://getsuvo.com/assets/brand-mark.png",
         "email": "hello@getsuvo.com",
+        "sameAs": [
+          "https://apps.apple.com/app/id6764276451",
+          "https://play.google.com/store/apps/details?id=com.suvo.mobile"
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "hello@getsuvo.com",
           "contactType": "customer support",
-          "availableLanguage": ["en", "de"]
+          "availableLanguage": [
+            "en",
+            "de"
+          ]
         }
       },
       {
@@ -51,19 +65,158 @@
         "@id": "https://getsuvo.com/#website",
         "name": "Suvo",
         "url": "https://getsuvo.com/",
-        "publisher": { "@id": "https://getsuvo.com/#organization" },
-        "inLanguage": ["en", "de"]
+        "publisher": {
+          "@id": "https://getsuvo.com/#organization"
+        },
+        "inLanguage": [
+          "en",
+          "de"
+        ]
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "WebPage",
+        "@id": "https://getsuvo.com/#webpage",
+        "url": "https://getsuvo.com/",
+        "name": "Supplement Tracker App for Interactions & Timing",
+        "isPartOf": {
+          "@id": "https://getsuvo.com/#website"
+        },
+        "about": {
+          "@id": "https://getsuvo.com/#app"
+        },
+        "primaryImageOfPage": "https://getsuvo.com/assets/og-image.png",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "MobileApplication",
         "@id": "https://getsuvo.com/#app",
         "name": "Suvo",
+        "alternateName": "Suvo Supplement Tracker",
         "applicationCategory": "HealthApplication",
+        "applicationSubCategory": "Supplement tracker",
         "operatingSystem": "iOS, Android",
-        "description": "Suvo helps people catalog supplements, review interaction and timing conflicts, and build a clearer supplement schedule.",
+        "description": "Suvo is a free supplement tracker that catalogs your stack, flags supplement interactions and timing conflicts, warns about upper limits, and schedules reminders.",
         "url": "https://getsuvo.com/",
         "image": "https://getsuvo.com/assets/og-image.png",
-        "publisher": { "@id": "https://getsuvo.com/#organization" }
+        "screenshot": "https://getsuvo.com/img/my-stack.png",
+        "downloadUrl": [
+          "https://apps.apple.com/app/id6764276451",
+          "https://play.google.com/store/apps/details?id=com.suvo.mobile"
+        ],
+        "installUrl": [
+          "https://apps.apple.com/app/id6764276451",
+          "https://play.google.com/store/apps/details?id=com.suvo.mobile"
+        ],
+        "sameAs": [
+          "https://apps.apple.com/app/id6764276451",
+          "https://play.google.com/store/apps/details?id=com.suvo.mobile"
+        ],
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Barcode, label-photo, and name search to add supplements",
+          "Interaction and timing conflict warnings",
+          "Upper-limit warnings across stacked products",
+          "Multivitamin breakdown into individual compounds",
+          "Morning, evening, and meal-time reminder slots",
+          "Daily, every-other-day, weekly, and monthly cadences",
+          "Adherence streaks that respect cadence",
+          "Managed profiles for family members",
+          "Country-aware retailer links"
+        ],
+        "inLanguage": [
+          "en",
+          "de"
+        ],
+        "publisher": {
+          "@id": "https://getsuvo.com/#organization"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://getsuvo.com/#faq",
+        "isPartOf": {
+          "@id": "https://getsuvo.com/#webpage"
+        },
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Suvo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Suvo is a free supplement tracker app for iPhone and Android. It catalogs your supplement stack, flags interactions and timing conflicts between supplements, warns when stacked products push a nutrient past its upper limit, and reminds you when to take each one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Suvo free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Suvo is free, with no ads and no paywall. It is funded by affiliate links when you buy a product you already picked. See the affiliate disclosure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which supplement interactions does Suvo check?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Suvo checks compound-level conflicts across your whole stack, such as iron and calcium competing for absorption, coffee reducing iron uptake, and the same nutrient appearing in several products. Multivitamins are broken down into individual compounds so hidden overlaps are caught too."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Suvo know when to take each supplement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Suvo places supplements into morning, evening, and meal-time slots and adds timing notes, such as taking iron apart from calcium or coffee. Daily, every-other-day, weekly, and monthly cadences are supported, and reminders fire only for the slots you choose."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I scan supplement bottles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Scan a barcode, photograph the supplement-facts label, or search by name. Label-photo OCR reads compounds and doses so you do not type them in."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track supplements for a family member?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. An adult account holder can create managed profiles, for example for a child they are legally responsible for, and track that person's stack under the same account. For a child, elderly person, or dependent adult, consult a physician or pharmacist before changing supplements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does Suvo's interaction data come from?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "From named source tiers: regulatory authorities such as EFSA, government institutes such as the NIH Office of Dietary Supplements, systematic reviews such as Cochrane, and curated databases. The source library lists each source and why it is trusted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Suvo medical advice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Suvo is educational and does not diagnose, treat, or replace a doctor or pharmacist. Talk to a clinician before starting, stopping, or combining supplements with medication."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I export or delete my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the app, open Settings → Your data to export your data or delete your account. If you cannot access the app, email hello@getsuvo.com. Details are on the account deletion page."
+            }
+          }
+        ]
       }
     ]
   }
@@ -116,7 +269,7 @@
             </span>
             <span class="store-badge-text">Get it on App Store</span>
           </a>
-          <a class="cta cta-secondary" href="https://play.google.com/store/apps/details?id=com.suvo.mobile" target="_blank" rel="noopener noreferrer">
+          <a class="cta cta-secondary" href="https://play.google.com/store/apps/details?id=com.suvo.mobile&amp;referrer=utm_source%3Dgetsuvo.com%26utm_medium%3Dwebsite%26utm_campaign%3Dhero" target="_blank" rel="noopener noreferrer">
             <span class="store-badge-icon" aria-hidden="true">
               <svg width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.546 2.372c-.74.786-1.18 1.938-1.18 3.396v28.466c0 1.458.44 2.61 1.18 3.396l.188.176 15.95-15.949v-.563L2.734 2.196l-.188.176Z" fill="#00D3FF"/>
@@ -350,6 +503,52 @@
     <p class="section-link"><a href="sources/">Browse Suvo's source library</a></p>
   </section>
 
+  <section id="faq" class="faq-section">
+    <div class="section-heading">
+      <span class="section-eyebrow">FAQ</span>
+      <h2>Supplement tracker questions, answered</h2>
+      <p class="section-sub">What Suvo checks, what it costs, and where its rules come from.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is Suvo?</summary>
+        <p>Suvo is a free supplement tracker app for iPhone and Android. It catalogs your supplement stack, flags interactions and timing conflicts between supplements, warns when stacked products push a nutrient past its upper limit, and reminds you when to take each one.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Suvo free?</summary>
+        <p>Yes. Suvo is free, with no ads and no paywall. It is funded by affiliate links when you buy a product you already picked. See the <a href="affiliates.html">affiliate disclosure</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which supplement interactions does Suvo check?</summary>
+        <p>Suvo checks compound-level conflicts across your whole stack, such as iron and calcium competing for absorption, coffee reducing iron uptake, and the same nutrient appearing in several products. Multivitamins are broken down into individual compounds so hidden overlaps are caught too.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does Suvo know when to take each supplement?</summary>
+        <p>Suvo places supplements into morning, evening, and meal-time slots and adds timing notes, such as taking iron apart from calcium or coffee. Daily, every-other-day, weekly, and monthly cadences are supported, and reminders fire only for the slots you choose.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I scan supplement bottles?</summary>
+        <p>Yes. Scan a barcode, photograph the supplement-facts label, or search by name. Label-photo OCR reads compounds and doses so you do not type them in.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I track supplements for a family member?</summary>
+        <p>Yes. An adult account holder can create managed profiles, for example for a child they are legally responsible for, and track that person's stack under the same account. For a child, elderly person, or dependent adult, consult a physician or pharmacist before changing supplements.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where does Suvo's interaction data come from?</summary>
+        <p>From named source tiers: regulatory authorities such as EFSA, government institutes such as the NIH Office of Dietary Supplements, systematic reviews such as Cochrane, and curated databases. The <a href="sources/">source library</a> lists each source and why it is trusted.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Suvo medical advice?</summary>
+        <p>No. Suvo is educational and does not diagnose, treat, or replace a doctor or pharmacist. Talk to a clinician before starting, stopping, or combining supplements with medication.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I export or delete my data?</summary>
+        <p>In the app, open Settings → Your data to export your data or delete your account. If you cannot access the app, email <a href="mailto:hello@getsuvo.com">hello@getsuvo.com</a>. Details are on the <a href="delete-account.html">account deletion page</a>.</p>
+      </details>
+    </div>
+  </section>
+
   <section id="support" class="cta-section">
     <div class="cta-box">
       <h2>Download Suvo today.</h2>
@@ -359,7 +558,7 @@
           <img class="button-logo" src="assets/brand-mark.png" alt="" width="20" height="20" />
           Download on the App Store
         </a>
-        <a class="cta-glass-on-brand" href="https://play.google.com/store/apps/details?id=com.suvo.mobile" target="_blank" rel="noopener noreferrer">
+        <a class="cta-glass-on-brand" href="https://play.google.com/store/apps/details?id=com.suvo.mobile&amp;referrer=utm_source%3Dgetsuvo.com%26utm_medium%3Dwebsite%26utm_campaign%3Dcta" target="_blank" rel="noopener noreferrer">
           <img class="button-logo" src="assets/brand-mark.png" alt="" width="20" height="20" />
           Get it on Google Play
         </a>
