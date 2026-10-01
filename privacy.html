@@ -81,9 +81,14 @@
       <li>We do not run third-party advertising networks inside the app.</li>
     </ul>
 
+    <h2>Notifications</h2>
+    <p>If you turn on notifications, Suvo can send you push notifications, for example when a supplement is about to run out. A refill reminder shows the name of the supplement from our catalog, so you can recognise it on your lock screen. Notifications are best-effort: they may be delayed or not delivered, and they are not a medical alert or an exact alarm. Notifications are optional. You can turn them off in the app (Reminders) or in your device settings, and Suvo works without them.</p>
+    <p>Occasionally the Suvo team may send a notification to your account, for example to tell you about a new app version. The text of these messages is written by Suvo, is not generated from your supplements, health information or other account data, and is only sent if you have notifications turned on. We keep a record of each message sent (which message, when, and whether it was delivered) so that we can operate the service and investigate problems.</p>
+
     <h2>Third-party services</h2>
     <p>When you tap a product link inside the app, you leave Suvo and open the retailer's website (for example, Amazon). That retailer's privacy policy governs everything that happens after that point.</p>
     <p>We use PostHog for product analytics. Analytics events must not contain managed-profile names, ages, supplement details, notes, intake history, or evaluation results.</p>
+    <p>To deliver notifications we use a push service (Expo) and the push services of your device platform (Apple Push Notification service on iPhone and Firebase Cloud Messaging of Google on Android). They receive a device notification token and the text of the notification, which can include the name of a supplement from our catalog. We store the token linked to your account and your device so we can send to the right device. A device link that has not signed in for 30 days stops being used for notifications, and the link and token are deleted when you delete your account. Records of delivered notifications are deleted 30 days after they finish.</p>
 
     <h2>How long we keep data</h2>
     <p>We keep account, app, and managed-profile data until it is deleted through the app or by a verified request, subject to the limited retention described on our <a href="delete-account.html">deletion page</a>. Encrypted disaster-recovery backups may retain residual copies for up to 35 days. Aggregated, anonymized security and operational records may be retained for up to 90 days.</p>
