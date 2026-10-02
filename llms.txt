@@ -15,6 +15,8 @@ Android app: https://play.google.com/store/apps/details?id=com.suvo.mobile
 - Breaks multivitamins into individual compounds
 - Flags supplement interactions and timing conflicts (for example iron with calcium or coffee)
 - Warns when stacked products push a nutrient past its upper limit
+- Sums each compound across all products in the stack and shows the total as a percentage of its recommended daily amount and of its upper limit
+- Applies minimum-spacing timing rules between specific compound pairs (for example iron and calcium)
 - Schedules morning, evening, and meal-time reminder slots with daily, every-other-day, weekly, and monthly cadences
 - Tracks adherence streaks that respect each supplement's cadence
 - Supports managed profiles for family members under one adult account
