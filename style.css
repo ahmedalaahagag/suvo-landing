@@ -1210,9 +1210,8 @@ footer {
   line-height: 1.6;
 }
 
-.footer-badge { margin-top: 18px; }
-.footer-badge a { display: inline-block; line-height: 0; }
-.footer-badge img { display: block; max-width: 100%; height: auto; }
+/* Stork Verified badge: kept in the HTML for directory verification, not shown */
+.footer-badge { display: none; }
 
 /* ---------- Legal pages ---------- */
 
