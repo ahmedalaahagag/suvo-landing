@@ -12,7 +12,7 @@ Android app: https://play.google.com/store/apps/details?id=com.suvo.mobile
 ## What Suvo does
 
 - Adds supplements by barcode scan, label-photo OCR, or name search
-- Breaks multivitamins into individual compounds
+- Breaks multivitamins into individual compounds, normalizes label names, brand names, synonyms and units (mg, mcg, IU) to one canonical compound, and tracks each compound separately
 - Flags supplement interactions and timing conflicts (for example iron with calcium or coffee)
 - Warns when stacked products push a nutrient past its upper limit
 - Sums each compound across all products in the stack and shows the total as a percentage of its recommended daily amount and of its upper limit
