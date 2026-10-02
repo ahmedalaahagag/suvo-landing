@@ -12,13 +12,23 @@ Android app: https://play.google.com/store/apps/details?id=com.suvo.mobile
 ## What Suvo does
 
 - Adds supplements by barcode scan, label-photo OCR, or name search
-- Breaks multivitamins into individual compounds
+- Breaks multivitamins into individual compounds, normalizes label names, brand names, synonyms and units (mg, mcg, IU) to one canonical compound, and tracks each compound separately
 - Flags supplement interactions and timing conflicts (for example iron with calcium or coffee)
 - Warns when stacked products push a nutrient past its upper limit
+- Sums each compound across all products in the stack and shows the total as a percentage of its recommended daily amount and of its upper limit
+- Applies minimum-spacing timing rules between specific compound pairs (for example iron and calcium)
 - Schedules morning, evening, and meal-time reminder slots with daily, every-other-day, weekly, and monthly cadences
 - Tracks adherence streaks that respect each supplement's cadence
 - Supports managed profiles for family members under one adult account
 - Links to country-appropriate retailers (DE, UK, US, MEA)
+- Checks a planned dose against upper limits and spacing rules before logging; rules can be silenced for a day, a week, or permanently
+- Applies rules by profile (general, pregnant, breastfeeding, on medication, athlete, baby, health condition) and age group; the on-medication profile enables drug-interaction checks
+- Tracks remaining supply from servings per container and sends optional refill notifications
+- Shows compounds taken at none or under half of the recommended daily amount, with catalog suggestions
+- Links findings to their source where one is recorded
+- Generates a daily text summary from the intake check and stack review (educational, limit 10 per day)
+- Looks up barcodes in the NIH Dietary Supplement Label Database and Open Food Facts; unmatched barcodes can be submitted for review
+- Exports all user data as JSON and deletes accounts in the app
 
 ## Key pages
 

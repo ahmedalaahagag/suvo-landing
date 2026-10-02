@@ -121,12 +121,21 @@
           "Supplements per Barcode, Etikettenfoto oder Namenssuche hinzufügen",
           "Warnungen zu Wechselwirkungen und Timing-Konflikten",
           "Höchstmengen-Warnungen über mehrere Produkte",
-          "Multivitamine in einzelne Wirkstoffe zerlegt",
+          "Tagessummen pro Wirkstoff in Prozent der empfohlenen Tagesmenge und der Obergrenze",
+          "Mindestabstands-Regeln für Timing zwischen Wirkstoff-Paaren",
+          "Multivitamine in einzelne Wirkstoffe zerlegt, über Namen, Synonyme und Einheiten normalisiert, pro Wirkstoff erfasst",
           "Erinnerungs-Slots für Morgen, Abend und Mahlzeiten",
           "Täglich, jeden zweiten Tag, wöchentlich und monatlich",
           "Ehrliche Streaks passend zum Rhythmus",
           "Verwaltete Profile für Familienmitglieder",
-          "Länderspezifische Händler-Links"
+          "Länderspezifische Händler-Links",
+          "Prüfung vor dem Loggen gegen Obergrenzen und Abstandsregeln, mit Stummschaltung pro Regel",
+          "Regeln nach Profil und Altersgruppe, inklusive Prüfung auf Arzneimittelwechselwirkungen",
+          "Nachkauf-Verfolgung und Erinnerungen",
+          "Lückenerkennung gegen empfohlene Tagesmengen",
+          "Befunde mit Quellenverweisen",
+          "Tageszusammenfassung aus Einnahme und Stack-Review",
+          "JSON-Datenexport und Kontolöschung in der App"
         ],
         "inLanguage": [
           "en",
@@ -418,7 +427,7 @@
       <div class="more-card more-card-teal">
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
         <div class="more-title">Multivitamin-Aufschlüsselung</div>
-        <div class="more-body">Eine Flasche wird zu einzelnen Wirkstoff-Zeilen — für ehrliche Adherence.</div>
+        <div class="more-body">Eine Flasche wird zu einzelnen Wirkstoff-Zeilen. Etikettennamen, Markennamen, Synonyme und Einheiten (mg, mcg, IE) werden auf einen kanonischen Wirkstoff normalisiert, sodass Multivitamin und Einzelprodukt zusammengerechnet und pro Wirkstoff erfasst werden.</div>
       </div>
       <div class="more-card more-card-purple">
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M12 4v8.5"/><path d="m21 9.5-9 5.5-9-5.5"/><path d="M3 14.5 12 20l9-5.5"/></svg>
@@ -435,6 +444,16 @@
         <div class="more-title">Obergrenzen-Sicherheit</div>
         <div class="more-body">Warnt, wenn ein neues Supplement einen Wirkstoff über die sichere Dosis heben würde.</div>
       </div>
+      <div class="more-card more-card-pink">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <div class="more-title">Tagessummen pro Wirkstoff</div>
+        <div class="more-body">Jeder Wirkstoff über alle Produkte deines Stacks summiert, als Prozent der empfohlenen Tagesmenge und der Obergrenze.</div>
+      </div>
+      <div class="more-card more-card-purple">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="more-title">Abstandsregeln</div>
+        <div class="more-body">Mindestabstände zwischen bestimmten Wirkstoff-Paaren, etwa Eisen und Calcium, sowie Hinweise zur Einnahme mit dem Essen, angewendet auf deinen Plan.</div>
+      </div>
       <div class="more-card more-card-teal">
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <div class="more-title">Länderbewusste Händler</div>
@@ -444,6 +463,46 @@
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
         <div class="more-title">Ehrliche Streaks</div>
         <div class="more-body">Adherence und „am häufigsten vergessen“ respektieren wöchentliche oder monatliche Rhythmen — kein falsches 90&nbsp;% bei einem wöchentlichen Vitamin.</div>
+      </div>
+      <div class="more-card more-card-orange">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div class="more-title">Prüfen vor dem Loggen</div>
+        <div class="more-body">Beim Loggen wird die Einnahme gegen Obergrenzen und Abstandsregeln für die geplante Uhrzeit geprüft. Du kannst trotzdem loggen, eine Regel für einen Tag, eine Woche oder dauerhaft stummschalten, oder wirst gestoppt, wo eine Regel das Loggen blockiert.</div>
+      </div>
+      <div class="more-card more-card-teal">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="more-title">Profilbezogene Regeln</div>
+        <div class="more-body">Wähle ein Profil (allgemein, schwanger, stillend, mit Medikamenten, Sportler, Baby, Vorerkrankung) und eine Altersgruppe. Regeln gelten nur für die Profile, für die sie geschrieben sind. Das Profil „mit Medikamenten“ aktiviert Prüfungen auf Arzneimittelwechselwirkungen.</div>
+      </div>
+      <div class="more-card more-card-purple">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        <div class="more-title">Nachkauf-Erinnerungen</div>
+        <div class="more-body">Gib Portionen pro Packung an, und Suvo verfolgt den Rest, markiert „bald knapp“ und „knapp“ und kann eine Benachrichtigung senden. Benachrichtigungen lassen sich in den Einstellungen ausschalten.</div>
+      </div>
+      <div class="more-card more-card-pink">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="more-title">Lückenerkennung</div>
+        <div class="more-body">Vergleicht deine Stack-Summen mit den empfohlenen Tagesmengen für eine kuratierte Liste von Wirkstoffen und zeigt jene, von denen du nichts oder weniger als die Hälfte nimmst, mit Katalogvorschlägen.</div>
+      </div>
+      <div class="more-card more-card-orange">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <div class="more-title">Befunde verweisen auf Quellen</div>
+        <div class="more-body">Jeder Befund nennt seine Quelle, sofern eine erfasst ist. Die öffentliche Quellenbibliothek erklärt, welche Quellenstufen Suvo nutzt und warum.</div>
+      </div>
+      <div class="more-card more-card-teal">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        <div class="more-title">Tageszusammenfassung</div>
+        <div class="more-body">Eine Textzusammenfassung, erzeugt aus dem heutigen Einnahme-Check und dem Stack-Review. Bildungsinformation, keine medizinische Beratung. Begrenzt auf 10 pro Tag.</div>
+      </div>
+      <div class="more-card more-card-purple">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        <div class="more-title">Produktdatenquellen</div>
+        <div class="more-body">Barcode-Abfragen nutzen die NIH Dietary Supplement Label Database und Open Food Facts. Ein nicht gefundener Barcode kann zur Prüfung eingereicht werden.</div>
+      </div>
+      <div class="more-card more-card-pink">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <div class="more-title">Deine Daten</div>
+        <div class="more-body">Exportiere jede Zeile, die wir über dich speichern, als JSON-Datei oder lösche dein Konto direkt in der App.</div>
       </div>
     </div>
   </section>

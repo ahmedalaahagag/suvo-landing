@@ -121,12 +121,21 @@
           "Barcode, label-photo, and name search to add supplements",
           "Interaction and timing conflict warnings",
           "Upper-limit warnings across stacked products",
-          "Multivitamin breakdown into individual compounds",
+          "Per-compound daily totals as a percentage of recommended daily amount and upper limit",
+          "Minimum-spacing timing rules between compound pairs",
+          "Multivitamin breakdown into individual compounds, normalized across names, synonyms and units, tracked per compound",
           "Morning, evening, and meal-time reminder slots",
           "Daily, every-other-day, weekly, and monthly cadences",
           "Adherence streaks that respect cadence",
           "Managed profiles for family members",
-          "Country-aware retailer links"
+          "Country-aware retailer links",
+          "Pre-log check against upper limits and spacing rules, with per-rule silencing",
+          "Profile- and age-group-aware rules, including drug-interaction checks",
+          "Refill tracking and reminders",
+          "Gap detection against recommended daily amounts",
+          "Findings linked to sources",
+          "Daily summary of intake and stack review",
+          "In-app JSON data export and account deletion"
         ],
         "inLanguage": [
           "en",
@@ -419,7 +428,7 @@
       <div class="more-card more-card-teal">
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
         <div class="more-title">Multivitamin breakdown</div>
-        <div class="more-body">One bottle becomes individual compound rows for honest adherence.</div>
+        <div class="more-body">One bottle becomes individual compound rows. Label names, brand names, synonyms and units (mg, mcg, IU) are normalized to one canonical compound, so a multivitamin and a single-ingredient product add up together and are tracked per compound.</div>
       </div>
       <div class="more-card more-card-purple">
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M12 4v8.5"/><path d="m21 9.5-9 5.5-9-5.5"/><path d="M3 14.5 12 20l9-5.5"/></svg>
@@ -436,6 +445,16 @@
         <div class="more-title">Upper-limit safety</div>
         <div class="more-body">Warns when adding a supplement would push a compound past its safe dose.</div>
       </div>
+      <div class="more-card more-card-pink">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <div class="more-title">Daily totals per compound</div>
+        <div class="more-body">Every compound summed across all products in your stack, shown as a percentage of its recommended daily amount and of its upper limit.</div>
+      </div>
+      <div class="more-card more-card-purple">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="more-title">Spacing rules</div>
+        <div class="more-body">Minimum gaps between specific compound pairs, such as iron and calcium, and with-food notes, applied to your schedule.</div>
+      </div>
       <div class="more-card more-card-teal">
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <div class="more-title">Country-aware retailers</div>
@@ -445,6 +464,46 @@
         <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
         <div class="more-title">Honest streaks</div>
         <div class="more-body">Adherence and most-missed that respect weekly or monthly cadence — no false 90% on a weekly vitamin.</div>
+      </div>
+      <div class="more-card more-card-orange">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div class="more-title">Check before you log</div>
+        <div class="more-body">Logging a dose checks it against upper limits and spacing rules for the time you plan to take it. You can log anyway, silence a rule for a day, a week or permanently, or be stopped where a rule blocks logging.</div>
+      </div>
+      <div class="more-card more-card-teal">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="more-title">Profile-aware rules</div>
+        <div class="more-body">Pick a profile (general, pregnant, breastfeeding, on medication, athlete, baby, health condition) and an age group. Rules apply only to the profiles they are written for. The on-medication profile enables drug-interaction checks.</div>
+      </div>
+      <div class="more-card more-card-purple">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        <div class="more-title">Refill reminders</div>
+        <div class="more-body">Enter servings per container and Suvo tracks what is left, flags low-soon and low-now, and can send a notification. You can turn the notifications off in settings.</div>
+      </div>
+      <div class="more-card more-card-pink">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="more-title">Gap detection</div>
+        <div class="more-body">Compares your stack totals with recommended daily amounts for a curated list of compounds and shows the ones you take none of or less than half of, with catalog suggestions.</div>
+      </div>
+      <div class="more-card more-card-orange">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <div class="more-title">Findings link to sources</div>
+        <div class="more-body">Each finding cites its source where one is recorded. The public source library explains which source tiers Suvo uses and why.</div>
+      </div>
+      <div class="more-card more-card-teal">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        <div class="more-title">Daily summary</div>
+        <div class="more-body">A text summary generated from today's intake check and stack review. Educational information, not medical advice. Limited to 10 per day.</div>
+      </div>
+      <div class="more-card more-card-purple">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        <div class="more-title">Product data sources</div>
+        <div class="more-body">Barcode lookups use the NIH Dietary Supplement Label Database and Open Food Facts. A barcode that is not found can be submitted for review.</div>
+      </div>
+      <div class="more-card more-card-pink">
+        <svg class="more-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <div class="more-title">Your data</div>
+        <div class="more-body">Export every row we hold about you as a JSON file, or delete your account, from inside the app.</div>
       </div>
     </div>
   </section>
