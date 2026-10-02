@@ -21,6 +21,14 @@ Android app: https://play.google.com/store/apps/details?id=com.suvo.mobile
 - Tracks adherence streaks that respect each supplement's cadence
 - Supports managed profiles for family members under one adult account
 - Links to country-appropriate retailers (DE, UK, US, MEA)
+- Checks a planned dose against upper limits and spacing rules before logging; rules can be silenced for a day, a week, or permanently
+- Applies rules by profile (general, pregnant, breastfeeding, on medication, athlete, baby, health condition) and age group; the on-medication profile enables drug-interaction checks
+- Tracks remaining supply from servings per container and sends optional refill notifications
+- Shows compounds taken at none or under half of the recommended daily amount, with catalog suggestions
+- Links findings to their source where one is recorded
+- Generates a daily text summary from the intake check and stack review (educational, limit 10 per day)
+- Looks up barcodes in the NIH Dietary Supplement Label Database and Open Food Facts; unmatched barcodes can be submitted for review
+- Exports all user data as JSON and deletes accounts in the app
 
 ## Key pages
 
