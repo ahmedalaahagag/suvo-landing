@@ -241,14 +241,24 @@ nav a:not(.brand):hover { color: var(--text); }
 
 .hero-video {
   display: block;
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
-  border-radius: 20px;
-  border: 1px solid var(--border-light);
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.55),
-    0 0 80px rgba(255,107,0,0.18);
+  aspect-ratio: 488 / 1050;
+  border-radius: 46px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 98%);
+  mask-image: linear-gradient(to bottom, #000 62%, transparent 98%);
+}
+
+.hero-shot::before {
+  content: "";
+  position: absolute;
+  inset: 8% -10% 0;
+  background: radial-gradient(ellipse at 50% 45%, rgba(255,107,0,0.22), rgba(236,72,153,0.10) 45%, transparent 70%);
+  filter: blur(30px);
+  pointer-events: none;
 }
 
 h1 {
