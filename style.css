@@ -765,6 +765,13 @@ footer a:hover { color: var(--text); }
 
 /* ---------- Trust section: how a finding is reached ---------- */
 
+.hero-not {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand);
+}
+
 .hero-chain {
   margin: 0 0 24px;
   font-size: 14px;
