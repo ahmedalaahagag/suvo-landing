@@ -763,6 +763,93 @@ footer a:hover { color: var(--text); }
   position: relative;
 }
 
+/* ---------- Trust section: how a finding is reached ---------- */
+
+.hero-chain {
+  margin: 0 0 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.chain {
+  list-style: none;
+  max-width: var(--max);
+  margin: 0 auto 32px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.chain li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: rgba(21, 21, 26, 0.6);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 600;
+}
+.chain li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand);
+  font-weight: 700;
+}
+.chain-num {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,107,0,0.18);
+  color: var(--brand);
+  font-size: 12px;
+}
+
+.finding-card {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  padding: 28px;
+  background: rgba(21, 21, 26, 0.7);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(255,107,0,0.10);
+}
+.finding-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+.finding-card h3 { margin: 8px 0 18px; font-size: 22px; }
+.finding-rows { margin: 0; }
+.finding-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+.finding-row dt { color: var(--text-muted); font-size: 13px; }
+.finding-row dd { margin: 0; font-size: 15px; }
+.finding-link { display: inline-block; margin-top: 12px; font-size: 14px; font-weight: 600; }
+
+@media (max-width: 820px) {
+  .chain { grid-template-columns: 1fr; gap: 20px; }
+  .chain li:not(:last-child)::after { content: "↓"; right: auto; left: 28px; top: auto; bottom: -19px; transform: none; }
+  .finding-row { grid-template-columns: 1fr; gap: 4px; }
+}
+
 /* ---------- Marquee scrolling band ---------- */
 
 .marquee-band {
