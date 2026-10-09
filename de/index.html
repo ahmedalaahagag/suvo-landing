@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.getsuvo.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
   <title>Nahrungsergänzungs-Tracker für Wechselwirkungen &amp; Timing | Suvo</title>
   <meta name="description" content="Suvo ist ein Supplement-Tracker: Stack scannen, Wechselwirkungen erkennen und Einnahmen passend zu Mahlzeiten und Schlaf planen." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
@@ -318,6 +318,99 @@
     </div>
   </header>
 
+  <section id="free-review" class="free-review features" data-lang="de" hidden>
+    <div class="section-heading">
+      <span class="section-eyebrow">Kostenlose Stack-Prüfung</span>
+      <h2>Prüfe deinen Stack</h2>
+      <p class="section-sub">Füge ein, was du nimmst — ein Wirkstoff und die Dosis pro Zeile. Bildungsreview, keine medizinische Beratung.</p>
+    </div>
+
+    <div class="fr-shell">
+      <div data-panel="input">
+        <label class="fr-label" for="fr-input">Deine Supplements</label>
+        <textarea id="fr-input" data-role="input" class="fr-textarea" rows="6" placeholder="Vitamin D 2000 IU&#10;Magnesium 400 mg&#10;Omega-3 1000 mg"></textarea>
+        <p class="fr-hint">Wirkstoff + Dosis pro Zeile. Übliche Mengen reichen.</p>
+        <button type="button" class="fr-btn" data-action="parse">Stack prüfen</button>
+      </div>
+
+      <div data-panel="busy" hidden>
+        <p class="fr-busy" data-role="busy-msg">Einen Moment…</p>
+      </div>
+
+      <div data-panel="confirm" hidden>
+        <h3 class="fr-panel-title">Bitte bestätigen</h3>
+        <ul class="fr-list" data-role="known-list"></ul>
+        <div data-role="unknown-wrap" hidden>
+          <h4 class="fr-panel-sub">Diese Zeilen konnten wir nicht zuordnen</h4>
+          <ul class="fr-list" data-role="unknown-list"></ul>
+        </div>
+        <div class="fr-actions">
+          <button type="button" class="fr-btn fr-btn-ghost" data-action="back-input">Text bearbeiten</button>
+          <button type="button" class="fr-btn" data-action="confirm">Bewertung anzeigen</button>
+        </div>
+      </div>
+
+      <div data-panel="add-more" hidden>
+        <p class="fr-callout" data-role="add-more-msg">Mindestens drei erkannte Wirkstoffe braucht es für eine Bewertung.</p>
+        <ul class="fr-list" data-role="known-list"></ul>
+        <div data-role="unknown-wrap" hidden>
+          <h4 class="fr-panel-sub">Diese Zeilen konnten wir nicht zuordnen</h4>
+          <ul class="fr-list" data-role="unknown-list"></ul>
+        </div>
+        <div class="fr-actions">
+          <button type="button" class="fr-btn" data-action="back-input">Mehr hinzufügen</button>
+        </div>
+      </div>
+
+      <div data-panel="teaser" hidden>
+        <h3 class="fr-panel-title">Deine Bewertung</h3>
+        <p class="fr-disclaimer">Bildungsreview, keine medizinische Beratung. Dosen als übliche Mengenbereiche.</p>
+        <div class="fr-findings" data-role="findings"></div>
+        <div class="fr-locked" data-role="locked" hidden>
+          <p class="fr-locked-summary" data-role="locked-summary"></p>
+          <p class="fr-locked-why">Speichere deinen Stack, um die anderen Hinweise zu sehen und über die Zeit zu verfolgen.</p>
+        </div>
+      </div>
+
+      <div data-panel="limit" hidden>
+        <h3 class="fr-panel-title">Tageslimit erreicht</h3>
+        <p>Lege ein Konto an, um weiterzumachen.</p>
+        <div class="fr-email-row">
+          <label class="visually-hidden" for="fr-limit-email">E-Mail</label>
+          <input id="fr-limit-email" type="email" data-role="limit-email" class="fr-input" placeholder="du@example.com" autocomplete="email" />
+          <button type="button" class="fr-btn" data-action="limit-email">Konto anlegen</button>
+        </div>
+        <p class="fr-status" data-role="limit-status" role="status"></p>
+      </div>
+
+      <div data-panel="waitlist" hidden>
+        <h3 class="fr-panel-title" data-role="waitlist-title">Gerade hohe Nachfrage</h3>
+        <p data-role="waitlist-body">Hinterlasse deine E-Mail — wir schicken dir die Bewertung, sobald Kapazität frei ist.</p>
+        <div class="fr-email-row">
+          <label class="visually-hidden" for="fr-waitlist-email">E-Mail</label>
+          <input id="fr-waitlist-email" type="email" data-role="waitlist-email" class="fr-input" placeholder="du@example.com" autocomplete="email" />
+          <button type="button" class="fr-btn" data-action="waitlist-email">Auf die Warteliste</button>
+        </div>
+        <p class="fr-status" data-role="waitlist-status" role="status"></p>
+      </div>
+
+      <div data-panel="error" hidden>
+        <p class="fr-callout fr-callout-error" data-role="error-msg"></p>
+        <button type="button" class="fr-btn" data-action="back-input">Erneut versuchen</button>
+      </div>
+    </div>
+
+    <div class="fr-pinned" data-role="pinned-cta" hidden>
+      <p class="fr-pinned-copy">Speichere deinen Stack, um die anderen Hinweise zu sehen und über die Zeit zu verfolgen.</p>
+      <div class="fr-email-row">
+        <label class="visually-hidden" for="fr-cta-email">E-Mail</label>
+        <input id="fr-cta-email" type="email" data-role="cta-email" class="fr-input" placeholder="du@example.com" autocomplete="email" />
+        <button type="button" class="fr-btn" data-action="cta-email">Stack speichern</button>
+      </div>
+      <p class="fr-status" data-role="cta-status" role="status"></p>
+    </div>
+  </section>
+
   <section id="sources" class="features trust-section">
     <div class="section-heading">
       <span class="section-eyebrow">Evidenz</span>
@@ -356,6 +449,8 @@
     </div>
     <p class="section-link"><a href="sources/">Suvos Quellenbibliothek ansehen</a></p>
   </section>
+
+
 
 
   <div class="marquee-band" aria-hidden="true">
@@ -646,5 +741,6 @@
     </div>
   </footer>
   <script src="../i18n.js"></script>
+  <script src="../stack-review.js"></script>
 </body>
 </html>
