@@ -144,7 +144,85 @@
     };
   }
 
+  function forceShow() {
+    try {
+      var q = new URLSearchParams(window.location.search).get('free_review');
+      if (q === '1' || q === 'true') {
+        return true;
+      }
+      return localStorage.getItem('suvo_free_review_force') === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Preview-only mocks when ?free_review=1 — API kill switch blocks live
+  // parse/run. No network in this mode.
+  function mockParse(text) {
+    var lines = String(text || '').split(/\n/).map(function (l) {
+      return l.trim();
+    }).filter(Boolean);
+    var rows = lines.map(function (line, i) {
+      var m = line.match(/^(.+?)\s+(\d+(?:\.\d+)?)\s*([A-Za-zµuμ]+)\s*$/);
+      var name = m ? m[1].trim() : line;
+      var key = name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '') || ('item_' + (i + 1));
+      return {
+        row_id: 'mock-' + (i + 1),
+        line: line,
+        name: name,
+        status: 'resolved',
+        display_name: name,
+        selected_key: key,
+        candidates: [],
+        issues: [],
+        dose: m ? { value: parseFloat(m[2], 10), unit: m[3], raw: m[2] + ' ' + m[3] } : null
+      };
+    });
+    return Promise.resolve({ ok: true, status: 200, data: { rows: rows } });
+  }
+
+  function mockRun() {
+    var titles = lang === 'de' ? {
+      conflict: 'Eisen und Calcium besser getrennt einnehmen',
+      conflictMsg: 'Beide konkurrieren um die Aufnahme. Üblicher Abstand: ein paar Stunden.',
+      dose: 'Vitamin D liegt im oberen üblichen Bereich',
+      doseMsg: 'Typische Tagesmengen reichen oft; höhere Dosen mit einer Fachperson klären.',
+      good: 'Vitamin D und Magnesium ergänzen sich oft',
+      goodMsg: 'Magnesium unterstützt typische Vitamin-D-Stoffwechselwege.'
+    } : {
+      conflict: 'Iron and calcium are better taken apart',
+      conflictMsg: 'They can compete for absorption. A few hours apart is a common pattern.',
+      dose: 'Vitamin D is toward the high end of typical ranges',
+      doseMsg: 'Everyday amounts are usually enough; higher doses are worth checking with a clinician.',
+      good: 'Vitamin D and magnesium often work well together',
+      goodMsg: 'Magnesium supports common vitamin D pathways.'
+    };
+    return Promise.resolve({
+      ok: true,
+      status: 200,
+      data: {
+        review: {
+          review_id: 'mock-review',
+          items: [
+            { id: 'm1', type: 'conflict', severity: 'warning', title: titles.conflict, message: titles.conflictMsg },
+            { id: 'm2', type: 'dose', severity: 'warning', title: titles.dose, message: titles.doseMsg },
+            { id: 'm3', type: 'synergy', severity: 'success', title: titles.good, message: titles.goodMsg }
+          ]
+        },
+        locked_count: 3,
+        locked_summary: [
+          { bucket: 'separate', kind: 'Conflict' },
+          { bucket: 'separate', kind: 'Conflict' },
+          { bucket: 'good', kind: 'Synergy' }
+        ]
+      }
+    });
+  }
+
   function emit(name, props) {
+    if (forceShow()) {
+      return;
+    }
     var meta = funnelMeta();
     var body = {
       events: [{
@@ -168,6 +246,18 @@
   }
 
   function api(path, payload) {
+    if (forceShow()) {
+      if (path.indexOf('/parse') >= 0) {
+        return mockParse(payload && payload.text);
+      }
+      if (path.indexOf('/waitlist') >= 0) {
+        return Promise.resolve({ ok: true, status: 200, data: { status: 'ok' } });
+      }
+      if (path.indexOf('/stack-review') >= 0) {
+        return mockRun();
+      }
+      return Promise.resolve({ ok: true, status: 200, data: {} });
+    }
     var meta = funnelMeta();
     var body = Object.assign({}, payload, {
       anonymous_id: meta.anonymous_id,
@@ -463,7 +553,7 @@
     api('/api/v1/public/stack-review/parse', { text: text }).then(function (res) {
       if (!res.ok) {
         if (res.data && res.data.code === 'FEATURE_DISABLED') {
-          root.hidden = true;
+          setError(copy.errorGeneric);
           return;
         }
         if (res.data && res.data.code === 'WAITLIST') {
@@ -508,11 +598,11 @@
           panel('limit');
           return;
         }
-        if (res.data && (res.data.code === 'WAITLIST' || res.data.code === 'FEATURE_DISABLED')) {
-          if (res.data.code === 'FEATURE_DISABLED') {
-            root.hidden = true;
-            return;
-          }
+        if (res.data && res.data.code === 'FEATURE_DISABLED') {
+          setError(copy.errorGeneric);
+          return;
+        }
+        if (res.data && res.data.code === 'WAITLIST') {
           showWaitlist();
           return;
         }
@@ -568,6 +658,12 @@
           status.textContent = copy.errorGeneric;
         }
       });
+      return;
+    }
+    if (forceShow()) {
+      if (status) {
+        status.textContent = copy.checkEmail;
+      }
       return;
     }
     fetch(API + '/api/v1/auth/magic-link', {
@@ -638,18 +734,6 @@
       waitBtn.addEventListener('click', function () {
         submitEmail('waitlist');
       });
-    }
-  }
-
-  function forceShow() {
-    try {
-      var q = new URLSearchParams(window.location.search).get('free_review');
-      if (q === '1' || q === 'true') {
-        return true;
-      }
-      return localStorage.getItem('suvo_free_review_force') === '1';
-    } catch (e) {
-      return false;
     }
   }
 
