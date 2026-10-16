@@ -26,9 +26,15 @@
     var status = document.getElementById("status");
     var openBtn = document.getElementById("open");
 
-    // Opens the Stack home, where the app shows that the submission was adopted. The old ?q= is
-    // ignored so emails already sent keep working.
+    // Opens the Stack home, where the app shows that the submission was adopted. Only an explicit
+    // to=search with a product name opens catalog search (users with nothing waiting in their stack);
+    // a bare ?q= from emails already sent still opens the Stack.
+    var params = new URLSearchParams(window.location.search);
+    var query = params.get("q");
     var deepLink = "suvo://supplements";
+    if (params.get("to") === "search" && query) {
+      deepLink = "suvo://supplements/catalog?refill_query=" + encodeURIComponent(query);
+    }
     openBtn.href = deepLink;
     openBtn.style.display = "inline-block";
 
