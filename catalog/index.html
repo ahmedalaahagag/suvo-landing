@@ -12,7 +12,6 @@
     p { color: #bbb; max-width: 420px; line-height: 1.5; margin: 8px 0; }
     a.button { display: inline-block; background: #FF6B00; color: #fff; text-decoration: none; padding: 14px 24px; border-radius: 10px; font-weight: 700; font-size: 16px; margin-top: 24px; }
     small { color: #777; font-size: 13px; margin-top: 32px; display: block; }
-    #err { color: #ff6b6b; }
   </style>
 </head>
 <body>
@@ -20,24 +19,16 @@
   <h1>suvo</h1>
   <p id="status">Opening the Suvo app…</p>
   <a id="open" class="button" href="#" style="display:none">Open Suvo</a>
-  <p id="err"></p>
   <small>Not installed yet? Get Suvo from the App Store or Google Play.</small>
 </main>
 <script>
   (function () {
-    var params = new URLSearchParams(window.location.search);
-    var query = params.get("q");
     var status = document.getElementById("status");
-    var err = document.getElementById("err");
     var openBtn = document.getElementById("open");
 
-    if (!query) {
-      status.textContent = "This link is missing a product name.";
-      err.textContent = "Open the Suvo app and search the catalog.";
-      return;
-    }
-
-    var deepLink = "suvo://supplements/catalog?refill_query=" + encodeURIComponent(query);
+    // Opens the Stack home, where the app shows that the submission was adopted. The old ?q= is
+    // ignored so emails already sent keep working.
+    var deepLink = "suvo://supplements";
     openBtn.href = deepLink;
     openBtn.style.display = "inline-block";
 
