@@ -32,6 +32,9 @@ Android app: https://play.google.com/store/apps/details?id=com.suvo.mobile
 
 ## Key pages
 
+- Product details (EN): https://getsuvo.com/features.html
+- Product details (DE): https://getsuvo.com/de/features.html
+
 - Homepage (EN): https://getsuvo.com/
 - Homepage (DE): https://getsuvo.com/de/
 - FAQ (EN): https://getsuvo.com/#faq
